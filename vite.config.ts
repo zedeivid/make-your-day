@@ -8,16 +8,16 @@ export default defineConfig({
     host: true
   },
   build: {
-    outDir: 'dist',
+    outDir: './',
     sourcemap: true,
     minify: 'terser',
     manifest: true,
     rollupOptions: {
       input: 'src/main.tsx',
       output: {
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
+        entryFileNames: 'main.js',
+        chunkFileNames: 'main.js',
+        assetFileNames: '[name].[ext]'
       }
     }
   }
